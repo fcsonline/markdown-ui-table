@@ -1,0 +1,21 @@
+[package]
+name = "csv-tool"
+version = "0.1.0"
+authors = ["Ferran Basora <fcsonline@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+name = "csvlib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "csvtool"
+path = "src/main.rs"
+
+[dependencies]
+pest = "2.1"
+pest_derive = "2.1"
+wasm-bindgen = { version = "0.2.69", features = ["serde-serialize"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
